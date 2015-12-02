@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>matteTools</class>
+ <widget class="QMainWindow" name="matteTools">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>456</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MatteID Manager</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="3">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>DB file : </string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QCheckBox" name="autoName_checkBox">
+             <property name="text">
+              <string>Pipeline Name</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Name : </string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QCheckBox" name="override_checkBox">
+             <property name="text">
+              <string>Override</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="path_lineEdit">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QCheckBox" name="showAll_checkBox">
+             <property name="text">
+              <string>Show All</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Path : </string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="name_lineEdit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="dbFile_lineEdit"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Project : </string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="project_comboBox"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="id_tableWidget">
+           <property name="minimumSize">
+            <size>
+             <width>220</width>
+             <height>0</height>
+            </size>
+           </property>
+           <column>
+            <property name="text">
+             <string>ID</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Asset</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Assigned</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Path</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="3,1">
+           <item>
+            <widget class="QPushButton" name="assignObjectID_pushButton">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Assign Object ID</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="clearObjectID_pushButton">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Clear</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>456</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>override_checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>path_lineEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>79</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

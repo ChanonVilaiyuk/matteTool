@@ -1,0 +1,6 @@
+databasePath: .local/vrayMatteID.yml
+databasePath2: .local/vrayObjectID.yml
+defaultNamespace: Rig
+rigGrp: Rig_Grp
+okIcon: O:/systemTool/mel/icons/OK_icon.png
+naIcon: O:/systemTool/mel/icons/na_icon.png
